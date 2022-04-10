@@ -1,0 +1,249 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+#root {
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.background {
+  height: 700px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+  background-image: url(https://libertycity.ru/uploads/gallery/main/84/wp3770447-red-dead-redemption-2-4k.jpg);
+
+  background-size: cover;
+}
+.sidebar {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  z-index: 20;
+  position: fixed;
+  word-spacing: -0.07em;
+  font-size: 20px;
+  line-height: 40px;
+  background: #000;
+  text-transform: uppercase;
+
+  width: 100%;
+  max-width: none;
+  border-bottom: 1px solid #000;
+  display: flex;
+  overflow: hidden;
+  top: var(--privacy-banner-height, 0);
+}
+.sidebar p {
+  color: whitesmoke;
+  line-height: 40px;
+  text-transform: uppercase;
+  word-spacing: -0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.sidebar:box-sizing:inherit {
+  box-sizing: inherit;
+}
+.cats {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 40px;
+  margin-top: 80px;
+}
+.cats a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: color 0.2s ease;
+}
+
+.cats a:hover {
+  color: #a11217;
+}
+.label {
+  font-size: 14px;
+}
+
+.commentMargin {
+  margin-top: 80px;
+  height: 1300px;
+}
+
+.comms {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: auto;
+  height: 60px;
+  font-size: 24px;
+}
+.comms div {
+  justify-content: space-between;
+  display: flex;
+  width: 500px;
+}
+
+.inputComm {
+  padding: 10px;
+  margin: 10px 10px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+.inputComm,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+.header__news {
+  font-size: 36px;
+  line-height: 40px;
+  margin: 1em 0 0.5em 0;
+  color: #343434;
+  font-weight: normal;
+  font-family: "Ultra", sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+.img_post img {
+  width: 500px;
+  height: 500px;
+}
+.post_text {
+  font-size: 18px;
+}
+.newsCats {
+  margin-top: 80px;
+
+  flex-flow: row wrap;
+
+  display: flex;
+}
+.news__all {
+  margin: 20px 63px;
+  width: 300px;
+  font-size: 24px;
+  width: 300px;
+  flex-flow: row wrap;
+  flex-wrap: nowrap;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.news__all:hover {
+  transform: scale(1.1);
+}
+
+.img__card {
+  width: 250px;
+  height: 250px;
+}
+.title__card {
+  height: 27.5px;
+  overflow: hidden;
+}
+.password_input {
+  padding: 10px;
+  margin: 10px 10px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  width: 300px;
+  border-radius: 5px;
+}
+.button__auth {
+  padding: 10px 10px;
+  border: none;
+  color: rgb(0, 0, 0);
+  height: 40px;
+  list-style: none;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border: 2px solid rgb(0, 0, 0);
+
+  cursor: pointer;
+  width: 320px;
+}
+.button__reg {
+  padding: 10px 10px;
+  border: none;
+  color: rgb(0, 0, 0);
+  height: 40px;
+  list-style: none;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border: 2px solid rgb(0, 0, 0);
+  cursor: pointer;
+  width: 320px;
+}
+.news__all button {
+  padding: 10px 10px;
+  border: none;
+  color: rgb(0, 0, 0);
+  height: 40px;
+  list-style: none;
+  background-color: rgb(0, 0, 0);
+  color: #000000;
+  border: 2px solid rgb(0, 0, 0);
+  text-decoration: none;
+}
+.link__button {
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+}
+.btnDel {
+  padding: 10px 10px;
+  border: none;
+  color: red;
+  height: 40px;
+  margin-top: auto;
+  background-color: white;
+  color: #9d2a17;
+  border: 2px solid #000000;
+}
+.buttonSend {
+  display: inline-block;
+
+  overflow: hidden;
+  left: 40%;
+  top: 40%;
+  padding: 10px 10px;
+  perspective: 400px;
+  background-color: transparent;
+  margin-left: 50px;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.3)));
+}
+
+.buttonSend span {
+  display: block;
+  position: relative;
+  transition: 0.3s ease-in-out all;
+  transform-origin: 50% 0;
+  transform-style: preserve-3d;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+.buttonSend span:after {
+  display: block;
+  content: attr(data-title);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s ease-in-out all;
+  transform-origin: 50% 0;
+  transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+  background-color: white;
+  color: black;
+  width: 100%;
+}
+
+.buttonSend:hover span {
+  transform: translate3d(0px, 0px, -30px) rotateX(90deg);
+}
