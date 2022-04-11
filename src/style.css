@@ -124,6 +124,13 @@ textarea {
 
   display: flex;
 }
+.comments__text {
+  display: flex;
+  justify-content: space-between;
+}
+label {
+  font-size: 18px;
+}
 .news__all {
   margin: 20px 63px;
   width: 300px;

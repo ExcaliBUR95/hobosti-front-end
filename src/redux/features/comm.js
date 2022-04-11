@@ -72,7 +72,7 @@ export const fetchComment = () => {
     }
   };
 };
-export const postComm = (text, news, user) => {
+export const postComm = (text, news, user, author) => {
   return async (dispatch, getState) => {
     const state = getState();
     dispatch({ type: "comm/post-comm/pending" });
@@ -88,6 +88,7 @@ export const postComm = (text, news, user) => {
           text,
           news,
           user,
+          author,
         }),
       });
       const json = await res.json();

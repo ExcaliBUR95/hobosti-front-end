@@ -13,12 +13,13 @@ const PostsId = ({ news, newsOne }) => {
   const comm = useSelector((state) => state.comm.items);
 
   const user = useSelector((state) => state.application.id);
+  const author = localStorage.getItem("author");
   const commFilter = comm.filter((item) => item.news === newsOne._id);
   const handleChangeComm = (e) => {
     setText(e.target.value);
   };
   const handleClickCOmm = () => {
-    dispatch(postComm(text1, newsOne._id, user));
+    dispatch(postComm(text1, newsOne._id, user, author));
     setText("");
   };
   if (loading) {
@@ -58,13 +59,16 @@ const PostsId = ({ news, newsOne }) => {
           return (
             <div className="comms" key={item._id}>
               <div>
-                <p> {item.text} </p>
-                <button
-                  className="btnDel"
-                  onClick={() => handleClickDelete(item._id)}
-                >
-                  X
-                </button>
+                <label>{item.author.toUpperCase()}</label>
+                <div className="comments__text">
+                  <p> {item.text} </p>
+                  <button
+                    className="btnDel"
+                    onClick={() => handleClickDelete(item._id)}
+                  >
+                    X
+                  </button>
+                </div>
               </div>
             </div>
           );

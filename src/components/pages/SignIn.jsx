@@ -18,6 +18,7 @@ const SignIn = () => {
 
   const handleClickIn = () => {
     dispatch(auth(login, password));
+    localStorage.setItem("author", login);
     handleClickHome();
   };
   let navigate = useNavigate();
