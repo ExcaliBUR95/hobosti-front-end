@@ -13,7 +13,7 @@ const Posts = () => {
   const dispatch = useDispatch();
   const [text1, setText] = useState("");
   useEffect(() => {
-    dispatch(fetchNews());
+    dispatch(React.memo(fetchNews()));
     dispatch(fetchComment());
   }, [dispatch]);
 

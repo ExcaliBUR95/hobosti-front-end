@@ -37,6 +37,7 @@ export const fetchNews = () => {
     try {
       const res = await fetch("/news");
       const json = await res.json();
+      console.log(json);
 
       dispatch({ type: "news/fetch-news/fulfilled", payload: json });
     } catch (error) {
@@ -44,8 +45,3 @@ export const fetchNews = () => {
     }
   };
 };
-//{
-// headers: {
-//       Authorization: `Bearer ${state.application.token}`,
-// },
-// }

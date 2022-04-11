@@ -63,6 +63,7 @@ export const createUser = (login, password) => {
     });
 
     const json = await res.json();
+
     if (json.error) {
       dispatch({ type: "application/signup/rejected", error: json.error });
     } else {
@@ -84,6 +85,7 @@ export const auth = (login, password) => {
     });
 
     const json = await res.json();
+
     if (json.error) {
       dispatch({ type: "application/signin/rejected", error: json.error });
     } else {

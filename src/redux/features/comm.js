@@ -66,6 +66,7 @@ export const fetchComment = () => {
     try {
       const res = await fetch("/comm");
       const json = await res.json();
+
       dispatch({ type: "comm/fetch-comm/fulfilled", payload: json });
     } catch (e) {
       dispatch({ type: "comm/fetch-comm/rejected", error: e.toString() });
@@ -92,7 +93,7 @@ export const postComm = (text, news, user, author) => {
         }),
       });
       const json = await res.json();
-      console.log(json);
+
       dispatch({ type: "comm/post-comm/fulfilled", payload: json });
     } catch (e) {
       dispatch({ type: "comm/post-comm/rejected", error: e.toString() });
